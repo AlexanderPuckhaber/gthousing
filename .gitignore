@@ -1,2 +1,2 @@
-src/data_copy/
+src/data_copy/*.json
 *.pyc
