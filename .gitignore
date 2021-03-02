@@ -1,2 +1,3 @@
 src/data_copy/*.json
 *.pyc
+*.backup
