@@ -121,7 +121,7 @@ def animate(window, canvas, realtime_start, realtime_end, speed_factor):
         largeFont = font.Font(family='Helvetica', size=20, weight='bold')
         medFont = font.Font(family='Helvetica', size=16)
 
-        canvas.create_text(key_x + x_offset, 25, text=str(scrape_timestamp), font=largeFont)
+
 
         canvas.create_text(x_offset, height, anchor="nw", text="Key: # free beds", font=medFont)
 
@@ -131,13 +131,10 @@ def animate(window, canvas, realtime_start, realtime_end, speed_factor):
 
             key_x += key_width
 
-        canvas.create_text(key_x + x_offset + 50, height, anchor="nw", text="bed color = Gender", font=medFont)
-        canvas.create_text(key_x + x_offset + 50, height + 30, anchor="nw", text="half rectangle = # free beds when filled",
-                           font=medFont)
+        canvas.create_text(key_x + x_offset + 50, height, anchor="nw",
+                           text="Bed Color = Gender\nGrouped by floor increasing left to right", font=medFont)
 
-        canvas.create_text(key_x + x_offset + 550, height, anchor="nw",
-                           text="Note: NAVE data incomplete \nGrouped by floor increasing left to right",
-                           font=medFont)
+        canvas.create_text(key_x + x_offset + 550, height, anchor="nw", text=str(scrape_timestamp), font=largeFont)
 
         for b_id in big_dict:
 

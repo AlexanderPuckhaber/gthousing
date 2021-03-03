@@ -116,8 +116,6 @@ def animate(window, canvas, realtime, speed_factor):
         largeFont = font.Font(family='Helvetica', size=20, weight='bold')
         medFont = font.Font(family='Helvetica', size=15, weight='bold')
 
-        canvas.create_text(key_x + x_offset, 20, text=str(scrape_datetimestamp), font=largeFont)
-
         canvas.create_text(x_offset, height, anchor="nw", text="Key: # free beds", font=medFont)
 
         for color_key in color_map.keys():
@@ -125,6 +123,8 @@ def animate(window, canvas, realtime, speed_factor):
             canvas.create_rectangle(key_x + x_offset, height+20, key_x + x_offset+30, height+20 + 30, fill=color_map[color_key]["color"])
 
             key_x += key_width
+
+        canvas.create_text(key_x + x_offset, height, anchor="nw", text=str(scrape_datetimestamp), font=largeFont)
 
         for b_id in building_room_map:
             comp_b_id = -1
