@@ -8,8 +8,9 @@
 - Web scraping data might have halted for a bit at some point, no promises. But the timestamps are all there
 - Stopped web scraping after the first few days of room selection because I got bored
 
-#### Visualizations
-[![Georgia Tech Housing Search 2020 - Visualization 1](https://img.youtube.com/vi/m7mX-xiZ4rc/0.jpg)](https://youtu.be/m7mX-xiZ4rc)  
+#### Visualization 1
+[![Georgia Tech Housing Search 2020 - Visualization 1](https://img.youtube.com/vi/m7mX-xiZ4rc/0.jpg)](https://youtu.be/m7mX-xiZ4rc)
+#### Visualization 2
 [![Georgia Tech Housing Search 2020 - Visualization 2](https://img.youtube.com/vi/2aIcVjosz1k/0.jpg)](https://youtu.be/2aIcVjosz1k)  
 
 #### FAQ
