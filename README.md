@@ -14,16 +14,16 @@
 [![Georgia Tech Housing Search 2020 - Visualization 2](https://img.youtube.com/vi/2aIcVjosz1k/0.jpg)](https://youtu.be/2aIcVjosz1k)  
 
 #### FAQ
+**Q: Is my Room Selection Number high enough to get the room(s) I want?**  
+**A: IDK the answer to that.** I made a document last year where ppl can put their Room Selection Number and Timeslot: [https://docs.google.com/spreadsheets/d/10IjfwrKaCz9sJFydztzRTWKretjQCbet1AT58FXwBes/edit?usp=sharing](https://docs.google.com/spreadsheets/d/10IjfwrKaCz9sJFydztzRTWKretjQCbet1AT58FXwBes/edit?usp=sharing), but there aren't enough data points yet.  Put yours in a comment and we can figure it out, it has to be piecewise linear :)  
+Also, keep in mind that this is only partial data for *one* (pretty strange) year, so past data can't really indicate how likely you are to get a spot or not. Even GT Housing has already made some changes, like reserving only a few floors in North Ave buildings for 2nd years instead of entire buildings (probably because the data show that 2nd years didn't fully fill those spots)    
+**Additionally, this visualization does not show restrictions on certain rooms for LLCs, undergrad/grad, etc**  
+
 **Q: Wouldn't this visualization be better as a webpage than some python Tkinter crap?**    
 **A: Yes, go for it.** I suggest looking at using the compressed data; you don't actually need to pickle it, you could just save the timestamps as strings/ints and keep it all in json format  
 
 **Q: What about data for this year? Could you update it in real-time?**  
 **A: I mean, probably.** I'm sure there's a way to setup a server to log the data and push it to a github repo automatically, and have a script to compress the data so a webpage could use it. That would be an interesting project, but there are like 2 weeks before room selection and I'm kinda busy.
-
-**Q: Is my Room Selection Number high enough to get the room(s) I want?**  
-**A: IDK the answer to that.** I made a document last year where ppl can put their Room Selection Number and Timeslot: [https://docs.google.com/spreadsheets/d/10IjfwrKaCz9sJFydztzRTWKretjQCbet1AT58FXwBes/edit?usp=sharing](https://docs.google.com/spreadsheets/d/10IjfwrKaCz9sJFydztzRTWKretjQCbet1AT58FXwBes/edit?usp=sharing), but there aren't enough data points yet.  Put yours in a comment and we can figure it out, it has to be piecewise linear :)  
-Also, keep in mind that this is only partial data for *one* (pretty strange) year, so past data can't really indicate how likely you are to get a spot or not. Even GT Housing has already made some changes, like reserving only a few floors in North Ave buildings for 2nd years instead of entire buildings (probably because the data show that 2nd years didn't fully fill those spots)    
-**Additionally, this visualization does not show restrictions on certain rooms for LLCs, undergrad/grad, etc**
 
 #### How to run?
 The data is already generated, so just `cd src/` and run:  
