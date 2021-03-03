@@ -18,6 +18,8 @@ with open(os.path.join(os.getcwd(), "mappings", "building_room_map.json"), 'r') 
 with open(os.path.join(os.getcwd(), "mappings", "file_time_map.json"), 'r') as f:
     file_time_map = json.load(f)
 
+image_output_dir = os.path.join(os.getcwd(), "output_visual2", "images")
+
 limit = 4000
 
 next_vividict = next_vividict = Vividict()
@@ -103,6 +105,7 @@ def animate(window, canvas, realtime_start, realtime_end, speed_factor):
 
         window.update()
 
+        canvas.postscript(file=os.path.join(image_output_dir, "{unix_time}.ps".format(unix_time=str(scrape_timestamp))))
         # clear canvas
         canvas.delete("all")
 

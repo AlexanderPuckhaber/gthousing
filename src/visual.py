@@ -15,6 +15,8 @@ with open(os.path.join(os.getcwd(), "mappings", "building_room_map.json"), 'r') 
 with open(os.path.join(os.getcwd(), "mappings", "file_time_map.json"), 'r') as f:
     file_time_map = json.load(f)
 
+image_output_dir = os.path.join(os.getcwd(), "output_visual", "images")
+
 comparison_json_files = {}
 
 for unix_time in file_time_map.keys():
@@ -94,8 +96,13 @@ def animate(window, canvas, realtime, speed_factor):
 
         window.update()
 
+        # save to file
+        canvas.postscript(file=os.path.join(image_output_dir, "{unix_time}.ps".format(unix_time=str(int(unix_time)))))
+
         # clear canvas
         canvas.delete("all")
+
+        canvas.configure(bg="white")
 
         height = 50
         boxheight = 30
@@ -103,22 +110,21 @@ def animate(window, canvas, realtime, speed_factor):
         x_offset = 30
         y_offset = 80
 
-        key_x = 100
+        key_x = 225
         key_width = 50
 
         largeFont = font.Font(family='Helvetica', size=20, weight='bold')
+        medFont = font.Font(family='Helvetica', size=15, weight='bold')
 
-        canvas.create_text(key_x + x_offset, 15, text=str(scrape_datetimestamp), font=largeFont)
+        canvas.create_text(key_x + x_offset, 20, text=str(scrape_datetimestamp), font=largeFont)
 
-        canvas.create_text(x_offset, height, anchor="nw", text="Key: # free beds")
+        canvas.create_text(x_offset, height, anchor="nw", text="Key: # free beds", font=medFont)
 
         for color_key in color_map.keys():
-            canvas.create_text(key_x + x_offset, height, anchor="nw", text=color_map[color_key]["desc"])
+            canvas.create_text(key_x + x_offset, height, anchor="nw", text=color_map[color_key]["desc"], font=medFont)
             canvas.create_rectangle(key_x + x_offset, height+20, key_x + x_offset+30, height+20 + 30, fill=color_map[color_key]["color"])
 
             key_x += key_width
-
-
 
         for b_id in building_room_map:
             comp_b_id = -1
@@ -134,8 +140,8 @@ def animate(window, canvas, realtime, speed_factor):
                     pass
                     #print("c_b_id", c_b_id, "not found!")
 
-            canvas.create_text(x_offset, height + y_offset, anchor="nw", text=building_room_map[b_id]["BuildingName"])
-            x = 150 + x_offset
+            canvas.create_text(x_offset, height + y_offset, anchor="nw", text=building_room_map[b_id]["BuildingName"], font=medFont)
+            x = 225 + x_offset
             #self.canvas.create_rectangle(x, height, x + boxheight, height + boxheight, fill="black")
             #print(b_id)
             #print(compare_json[b_id])
