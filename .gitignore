@@ -1,3 +1,5 @@
 src/data_copy/*.json
 *.pyc
 *.backup
+images/
+png_output/
