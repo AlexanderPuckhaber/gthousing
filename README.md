@@ -9,7 +9,8 @@
 - Stopped web scraping after the first few days of room selection because I got bored
 
 #### Visualizations
-[![Georgia Tech Housing Search 2020 - Visualization 1](https://img.youtube.com/vi/m7mX-xiZ4rc/0.jpg)](https://youtu.be/m7mX-xiZ4rc)
+[![Georgia Tech Housing Search 2020 - Visualization 1](https://img.youtube.com/vi/m7mX-xiZ4rc/0.jpg)](https://youtu.be/m7mX-xiZ4rc)  
+[![Georgia Tech Housing Search 2020 - Visualization 2](https://img.youtube.com/vi/2aIcVjosz1k/0.jpg)](https://youtu.be/2aIcVjosz1k)  
 
 #### How to run?
 The data is already generated, so just `cd src/` and run:  
