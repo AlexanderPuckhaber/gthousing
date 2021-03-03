@@ -1,6 +1,6 @@
 ## GT Housing Room Availability Data and Visualization
 
-#### Data source: [http://housing.gatech.edu/rooms/FreeRooms.json](http://housing.gatech.edu/rooms/FreeRooms.json)
+#### Data source: [http://housing.gatech.edu/rooms/FreeRooms.json](http://housing.gatech.edu/rooms/FreeRooms.json) in April 2020, showing search process for 2020-2021 year
 
 #### Data Quality Notes:
 - Web scraping didn't start until *after* room-stay selection, and started in the middle of 2nd Year North-Ave self-selection
@@ -8,11 +8,16 @@
 - Web scraping data might have halted for a bit at some point, no promises. But the timestamps are all there
 - Stopped web scraping after the first few days of room selection because I got bored
 
+#### Visualizations
+[![Georgia Tech Housing Search 2020 - Visualization 1](https://img.youtube.com/vi/m7mX-xiZ4rc/0.jpg)](https://youtu.be/m7mX-xiZ4rc)
+
 #### How to run?
 The data is already generated, so just `cd src/` and run:  
 `python visual.py`  
 or  
 `python visual2.py`
+
+
 
 #### What about the other files?
 - [src/web_scraper/getjson.sh](src/web_scraper/getjson.sh) is a bash script I used to get the data every 10 minutes
