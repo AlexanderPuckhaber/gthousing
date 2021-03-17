@@ -2,6 +2,9 @@
 
 #### Data source: [http://housing.gatech.edu/rooms/FreeRooms.json](http://housing.gatech.edu/rooms/FreeRooms.json) in April 2020, showing search process for 2020-2021 year
 
+## I'm doing web-scraping this year (Fall21-Spring22 search), [see this GitHub repo](https://github.com/AlexanderPuckhaber/gthousing-data.github.io)
+I won't be running visualizations until afterwards though.
+
 #### Data Quality Notes:
 - Web scraping didn't start until *after* room-stay selection, and started in the middle of 2nd Year North-Ave self-selection
 - North Ave data is therefore incomplete
